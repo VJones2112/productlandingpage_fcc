@@ -134,11 +134,16 @@ footer a {
 
 
 
-
+@media screen and (max-width: 500x) {
+    
+    #container img {
+        width: 95%;
+    }
+}
 
 
 @media screen and (min-width: 900px) {
-
+/*This is for desktop version.*/
     body {
         max-width: 900px;
         margin: 0 auto;
