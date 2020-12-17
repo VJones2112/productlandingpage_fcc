@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="">
     <link rel="stylesheet" href="style.css">
-    <script src="https://use.fontawesome.com/5db464c560.js"></script>
+    <script src="https://kit.fontawesome.com/ce93a524cb.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -17,8 +17,10 @@
 <body>
     
         <header id="header">
-            <a class="home" href="#header-img"><img id="header-img" src="images/handn.PNG"></a>
-
+<!--            <a class="home" href="#header-img"><img id="header-img" class="logo" src="images/handn.PNG" alt="logo"></a>-->
+            
+            <div class="navbar">
+            <a class="home" href="#header-img"><img id="header-img" class="logo" src="images/handn.PNG" alt="logo"></a>
             <nav id="nav-bar">
                 <ul>
                     <li><a class="nav-link" href="#hooks">Hooks</a></li>
@@ -28,7 +30,7 @@
                     <li><a class="nav-link" href="#about">About Us</a> </li>
                 </ul>
             </nav>
-        
+            </div>
 
             <div class="welcome">
                 <h1>Welcome to Hook & Needle!</h1>
@@ -46,11 +48,12 @@
 
 
 
-    <!--Below starts main section of page. Maybe I should have used main?-->
+    <!--Below starts main section of page.-->
     <div id="container">
-      <h2>Our Products</h2>
+<!--      <h2>Our Products</h2>-->
         <!--    The div below starts the products section.-->
         <div class="products">
+           <h2>Our Products</h2>
             <div id="hooks">
                 <!-- <div class="hooks">
                     <img src=images/hooks.jpg>
@@ -104,7 +107,11 @@
 
         </div>
 
-
+        <div id="social">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
         
         
         
