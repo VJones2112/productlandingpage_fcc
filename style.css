@@ -2,34 +2,49 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-size: 18px;
-    min-height: 100vh;
+    height: 100vh;
     font-family: 'Lato', sans-serif;
     background-color: #E8C9AB;
 }
 
-
+/******** The Header ********/
 header {
-    display: flex;
     top: 0;
-    flex-direction: column;
     font-size: 1.4rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/backgroundyarn.jpg);
-    position: fixed;
-    z-index: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/backgroundyarn.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    text-align: center;
-
+/*    text-align: left;*/
+    height: 100vh;
 }
 
+/******** The Logo ********/
 header img {
-    margin-top: 5px;
-    border-radius: 5px;
-    max-width: 100%;
-    height: 30px;
+    margin: 10px 10px;
+    border: 0.5px dashed #fff;
+    border-radius: 20px;
+    opacity: 70%;
+    height: 110px;
+}
+
+/******** The Nav (fixed position) ********/
+nav {
+/*     width: 100%; */
+    position: fixed;
+    display: flex;
+    border: 1px solid #fff;
+    flex-direction: column;
+    top: 1%;
+    right: 1%;
+    transform: translate(1%0, -1%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.168);
 }
 
 nav ul {
@@ -44,19 +59,99 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-#container {
+/******** The Header Text Container ********/
+.welcome {
+    text-align: center;
+    color: #fff;
     position: absolute;
-    top: 200px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+    width: 85%;
+}
+
+.welcome p {
+    padding: 0.5rem;
+    line-height: 150%;
+}
+
+input {
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+#submit {
+    background-color: #E8C9AB;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 5px;
+    height: 40px;
+    font-weight: 200;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.63);
+}
+
+/******** The Main Body Container ********/
+#container {
+/*    position: relative;*/
     box-shadow: 1px 4px 5px 1px #331900;
     margin-bottom: 1rem;
 }
+
+/******** The Products ********/
+.products {
+    margin-bottom: 50px;
+}
+
+.products p {
+    text-align: center;
+    max-width: 90%;
+    margin: 1rem auto;
+}
+
+#hooks {
+    height: 60vh;
+    background: url(images/hooks.jpg) no-repeat;
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+#needles {
+    height: 60vh;
+    background: url(images/needles.jpg);
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+#yarn {
+    height: 60vh;
+    background: url(images/yarn.jpg);
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+#hooks,
+#needles,
+#yarn { margin-top: 1.5rem; }
+
+#hooks:hover,
+#needles:hover,
+#yarn:hover { transform: scale(1.05); }
 
 h1,
 h2 {
@@ -65,57 +160,22 @@ h2 {
     padding: 0.5rem;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
+h1 { font-size: 2.5rem; }
 
-h2 {
-    font-size: 2rem;
-}
+h2 { font-size: 2rem; }
 
-img {
-    margin: 0 auto;
-    opacity: 0.9;
-    max-width: 100%;
-}
-
-.welcome {
-    text-align: center;
-}
-
-.welcome p {
-    padding: 0.5rem;
-}
-
-input {
-    margin-bottom: 10px;
-    height: 25px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-#submit {
-    background-color: #A9845A;
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 3px;
-    color: white;
-}
-
-.main img {
-    max-height: 300px;
-}
-
-#hooks,
-#needles,
-#yarn {
-    text-align: center;
-    margin-bottom: 50px;
+/******** How-To, About, and Footer Sections ********/
+.bottom {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/backgroundyarn.jpg) no-repeat;
+    background-size: cover; 
+    color: rgba(255, 255, 255, 0.837);
+    height: 100vh;
+    letter-spacing: 1px;
 }
 
 #howto {
     display: flex;
+    margin-top: 20px;
 }
 
 #video {
@@ -125,81 +185,91 @@ input {
 
 #video2 {
     flex: 1;
-    margin-right: 0;
     max-width: 95%;
 }
 
 #about {
     padding: 0.5rem;
+    width: 85vw;
+    text-align: center;
+    margin: 50px auto 20px auto;
+    line-height: 150%;     
 }
 
+#social {
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 1rem;
+}
+
+i { transition: transform 0.7s; }
+
+i:hover, i:active {
+    cursor: pointer;
+    transform: scale(1.15);
+    color: rgba(255, 255, 255, 0.31);
+}
+
+/******** The Footer ********/
 footer {
     font-family: 'Patrick Hand', cursive;
     padding: 0.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.837);
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/backgroundyarn.jpg) no-repeat;
 }
 
 footer a {
     text-decoration: none;
-    color: black;
+     color: rgba(255, 255, 255, 0.837); 
 }
 
-footer a:hover {
-    text-decoration: underline;
+footer a:hover {     
+    transform: scale(1.15);
+    color: rgba(255, 255, 255, 0.31); }
+
+
+
+/******** Desktop Styling ********/
+@media screen and (min-width: 900px) {
+    nav { left: 20% }
 }
-
-
-
-
+@media screen and (min-width: 1200px) {
+    nav { left: 30% }
+}
 @media screen and (min-width: 900px) {
 
     body {
         max-width: 900px;
         margin: 0 auto;
     }
-
-    #container {
-        max-width: 900px;
-        top: 0px;
-    }
-
-    .welcome {
-        margin-top: 90px
+    
+    nav {
+        width: 80%;
+        max-width: 650px;
+/*        left: 31%;*/
+        border: none;
     }
     
-    header {
-        max-width: 900px;
-    }
-
     nav ul {
-        display: flex;
+        display: inline-flex;
         justify-content: space-evenly;
     }
 
-    .products {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    #container { max-width: 900px; }
 
-    img {
-        max-width: 400px;
-    }
-
-    #hooks,
-    #needles,
-    #yarn {
-        flex: 1;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    footer {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
+    .video { text-align: center; }
+    
     #about {
         max-width: 70%;
-        margin: auto;
-
+        margin: 1rem auto;
+    }
+    
+    #social { margin-top: 1rem; }
+    
+    footer {
+        font-size: 1.2rem;
+        background: none;
     }
 }
