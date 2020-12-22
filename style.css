@@ -230,7 +230,10 @@ footer a:hover {
     color: rgba(255, 255, 255, 0.31); }
 
 
-
+/******** Small Mobile Styling ********/
+@media screen and (max-width: 400px) {
+    .welcome { margin-top: 5em; }
+}
 /******** Desktop Styling ********/
 @media screen and (min-width: 900px) {
     nav { left: 20% }
