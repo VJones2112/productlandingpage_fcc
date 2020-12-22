@@ -231,8 +231,8 @@ footer a:hover {
 
 
 /******** Small Mobile Styling ********/
-@media screen and (max-width: 400px) {
-    .welcome { margin-top: 5em; }
+@media screen and (max-width: 450px) {
+    .welcome { margin-top: 4.1em; }
 }
 /******** Desktop Styling ********/
 @media screen and (min-width: 900px) {
